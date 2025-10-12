@@ -2,7 +2,7 @@
 {
     display: flex;
     justify-content: center;
-    padding: 40px 5px;
+    padding: 30px 5px;
 }
 
 .search-container
@@ -17,8 +17,8 @@
 }
 .form-container input {
   width: 100%;
-  padding: 14px 60px 14px 18px;
-  font-size: 16px;
+  padding: 18px 65px 18px 25px;
+  font-size: 18px;
   border-radius: 28px;
   border: 2px solid #ddd;
   outline: none;
@@ -28,6 +28,7 @@
 
 .form-container input:focus {
   border-color: #5D2F77;
+  box-shadow: 0 0 10px rgba(93, 47, 119, 0.3);
 }
 
 
@@ -36,8 +37,8 @@
   right: 5px;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: #FFACAC;
   border: none;
