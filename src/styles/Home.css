@@ -1,0 +1,21 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  color: #3E1E68;
+  margin-bottom: 2rem;
+}
+
+.hero-logo {
+  width: 125px;
+  height: 140px;
+  object-fit: contain;
+  margin: 0 auto 18px;
+}

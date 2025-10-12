@@ -8,8 +8,6 @@ import Categories from './Components/Categories.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Header />
-    <Search />
-    <Categories />
+    <App />
   </StrictMode>,
 )
