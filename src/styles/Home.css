@@ -10,12 +10,13 @@
 .hero-title {
   font-size: 3.5rem;
   color: #3E1E68;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
 }
 
 .hero-logo {
   width: 125px;
-  height: 140px;
+  height: 130px;
   object-fit: contain;
   margin: 0 auto 18px;
+  align-items: center;
 }
