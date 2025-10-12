@@ -66,7 +66,7 @@ export const fetchBookDetails = createAsyncThunk<BookDetailsResponse, string>(
     "books/fetchBookDetails",
     async (bookId: string) => {
         const response = await axios.get<BookDetailsResponse>(
-            `${BASE_URL}/works/${bookid}.json`
+            `${BASE_URL}/works/${bookId}.json`
         );
         return response.data;
     }
