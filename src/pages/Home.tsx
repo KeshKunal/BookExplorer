@@ -26,7 +26,7 @@ const Home: React.FC = () => {
     <>
       <div className='hero-section'>
         <h1 className="hero-title">Find your next adventure!</h1>
-        <img src="src/assets/icon.png" alt="Book Explorer Logo" className="hero-logo" />
+        <img src="/icon.png" alt="Book Explorer Logo" className="hero-logo" />
         <Search />
         <Categories />
       </div>

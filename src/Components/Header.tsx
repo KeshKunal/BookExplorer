@@ -8,7 +8,7 @@ const Header: React.FC = () => {
     <header className="header-section">
         <div className='header-container'>
             <div className='logo'>
-            <Link to = "/"><img src="src\assets\icon.png" alt="Logo"/></Link>
+            <Link to = "/"><img src="/icon.png" alt="Logo"/></Link>
             <h2>Book Explorer</h2>
         </div>
         <div className='Nav-bar'>
