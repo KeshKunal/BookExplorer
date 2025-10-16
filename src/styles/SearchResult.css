@@ -1,0 +1,24 @@
+.search-results-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.search-results-page h1 {
+  font-size: 2.5rem;
+  color: #3E1E68;
+  border-bottom: 2px solid #E45A92;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.status-message {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.status-message.error {
+  color: red;
+}

@@ -20,3 +20,17 @@
   margin: 0 auto 18px;
   align-items: center;
 }
+
+.homepage-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.category-showcase h2 {
+  font-size: 2rem;
+  color: #3E1E68;
+  border-bottom: 2px solid #E45A92;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
