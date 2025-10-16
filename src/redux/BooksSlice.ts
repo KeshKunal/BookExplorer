@@ -39,7 +39,7 @@ export const fetchBooksByCategory = createAsyncThunk
     "books/fetchBooksByCategory",
     async (category: string) => {
         const response = await axios.get<BookResponse>(`${BASE_URL}/subjects/${category.toLowerCase()}.json?limit=4`);
-        return { category, books: response.data.works};
+        return { category, books: response.data.works || []};
     }
 );
 
@@ -47,7 +47,7 @@ export const fetchSearchResults = createAsyncThunk<SearchResult[], string>(
     `books/fetchSearchResults`,
     async (query: string) =>{
         const response = await axios.get(`${BASE_URL}/search.json?q=${query}`)
-        return response.data.doc.map((doc: {
+        return (response.data.docs || []).map((doc: {
             title: string;
             author_name: string[];
             key: string;

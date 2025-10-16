@@ -6,7 +6,9 @@ interface Book {
   key: string;
   title: string;
   authors?: { name: string }[];
+  author_name?: string[];
   cover_id?: number;
+  cover_i?: number;
 }
 
 interface BookListProps {
@@ -16,24 +18,29 @@ interface BookListProps {
 const BookList: React.FC<BookListProps> = ({ books }) => {
   return (
     <div className="book-list">
-      {books.map((book) => (
-        <div key={book.key} className="book-card">
-          <Link to={`/book/${book.key.replace("/works/", "")}`}>
-            {book.cover_id ? (
-              <img 
-                src={`https://covers.openlibrary.org/b/id/${book.cover_id}-M.jpg`} 
-                alt={book.title} 
-              />
-            ) : (
-              <div className="no-cover">No Cover</div>
-            )}
-            <div className="book-info">
-              <h3>{book.title}</h3>
-              <p>{book.authors?.[0]?.name || "Unknown Author"}</p>
-            </div>
-          </Link>
-        </div>
-      ))}
+      {books.map((book) => {
+        const coverId = book.cover_id || book.cover_i;
+        const author = book.authors?.[0]?.name || book.author_name?.[0] || "Unknown Author";
+
+        return (
+          <div key={book.key} className="book-card">
+            <Link to={`/book/${book.key.replace("/works/", "")}`}>
+              {coverId ? (
+                <img 
+                  src={`https://covers.openlibrary.org/b/id/${coverId}-M.jpg`} 
+                  alt={book.title} 
+                />
+              ) : (
+                <div className="no-cover">No Cover</div>
+              )}
+              <div className="book-info">
+                <h3>{book.title}</h3>
+                <p>{author}</p>
+              </div>
+            </Link>
+          </div>
+        );
+      })}
     </div>
   );
 };

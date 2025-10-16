@@ -20,7 +20,8 @@ const SearchResults: React.FC = () => {
       return <p className="status-message">No books found for your search.</p>;
     }
 
-    return <BookList books={searchResults} />;
+    const limitedResults = searchResults.slice(0, 20);
+    return <BookList books={limitedResults} />;
   };
 
   return (
