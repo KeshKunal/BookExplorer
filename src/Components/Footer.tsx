@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="app-footer">
       <div className="footer-inner">
-        <p>Made with love by Quantix 💖</p>
+        <p>Made with 💖 by Quantix</p>
       </div>
     </footer>
   )

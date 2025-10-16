@@ -1,11 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import type { RootState } from '../redux/store';
 import BookList from '../Components/BookList';
 import '../styles/SearchResult.css';
 
 const SearchResults: React.FC = () => {
   const { searchResults, loading, error } = useSelector((state: RootState) => state.books);
+  const navigate = useNavigate();
 
   const renderContent = () => {
     if (loading) {
@@ -26,6 +28,9 @@ const SearchResults: React.FC = () => {
 
   return (
     <div className="search-results-page">
+      <button onClick={() => navigate(-1)} className="back-button">
+        &larr; Go Back
+      </button>
       <h1>Search Results</h1>
       {renderContent()}
     </div>

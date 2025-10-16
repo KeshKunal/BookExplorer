@@ -37,7 +37,6 @@ const Home: React.FC = () => {
 
         {Object.entries(booksByCategory).map(([category, books]) => (
           <div key={category} className="category-showcase">
-            <h2>{category}</h2>
             <BookList books={books} />
           </div>
         ))}
